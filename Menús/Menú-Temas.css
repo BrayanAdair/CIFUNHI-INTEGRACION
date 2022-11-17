@@ -1,0 +1,229 @@
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(217,217,217,0.6), rgba(217,217,217,0.6)), url("images/ImagendeWhatsApp2022-10-17alas14.56.43.jpg");
+  background-position: 50% 100%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 643px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 60px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-weight: 700;
+  margin: 60px auto 0;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: 61px auto 0 248px;
+  padding: 10px 88px 10px 87px;
+}
+
+.u-section-1 .u-btn-2 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: -58px 249px 0 auto;
+  padding: 10px 82px;
+}
+
+.u-section-1 .u-btn-3 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: 18px auto 0 248px;
+  padding: 13px 42px 13px 40px;
+}
+
+.u-section-1 .u-btn-4 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: -58px 249px 0 auto;
+  padding: 13px 25px;
+}
+
+.u-section-1 .u-btn-5 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: 16px auto 0 248px;
+  padding: 9px 104px 10px 103px;
+}
+
+.u-section-1 .u-btn-6 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: -57px 249px 0 auto;
+  padding: 12px 18px 14px 16px;
+}
+
+.u-section-1 .u-btn-7 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: 20px 252px 0 auto;
+  padding: 9px 108px 10px 106px;
+}
+
+.u-section-1 .u-btn-8 {
+  border-style: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  background-image: none;
+  font-weight: 700;
+  margin: -57px auto 60px 250px;
+  padding: 13px 46px 13px 45px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 530px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-right: 49px;
+    margin-left: 488px;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-left: 150px;
+  }
+
+  .u-section-1 .u-btn-4 {
+    margin-top: -54px;
+    margin-right: 49px;
+  }
+
+  .u-section-1 .u-btn-5 {
+    margin-left: 148px;
+  }
+
+  .u-section-1 .u-btn-6 {
+    margin-right: 49px;
+  }
+
+  .u-section-1 .u-btn-7 {
+    margin-top: 19px;
+    margin-right: 52px;
+  }
+
+  .u-section-1 .u-btn-8 {
+    margin-bottom: 0;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 406px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 124px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-right: 0;
+    margin-left: 292px;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-left: 124px;
+  }
+
+  .u-section-1 .u-btn-4 {
+    margin-top: -53px;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-5 {
+    margin-left: 124px;
+  }
+
+  .u-section-1 .u-btn-6 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-7 {
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-btn-8 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 305px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-left: 119px;
+  }
+
+  .u-section-1 .u-btn-5 {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 192px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 1.5rem;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-left: 19px;
+  }
+
+  .u-section-1 .u-btn-4 {
+    margin-top: -54px;
+  }
+}
