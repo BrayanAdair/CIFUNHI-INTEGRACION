@@ -4,7 +4,7 @@
     $us = $_POST['user'];
     $pa = $_POST['password'];
     // queri para encontrar usuario y contraseña 
-    $query = "SELECT name,psswrdu FROM `srs` WHERE name = '$us' AND psswrdu = '$pa'";
+    $query = "SELECT urs_name,pss FROM `urs` WHERE urs_name = '$us' AND pss = '$pa'";
     // conexion y generar consulta
     $insert = $conexion->query($query);
 
