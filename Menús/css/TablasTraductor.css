@@ -1,0 +1,24 @@
+.container-traductor {
+    margin: 15px;
+    background-color: rgb(6, 6, 6);
+  }
+  .row-traductor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .column-traductor {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+  .column-style {
+    background-color: orange;
+    height: 100px;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top: 2%;
+  }
