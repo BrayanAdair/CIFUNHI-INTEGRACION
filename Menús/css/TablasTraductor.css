@@ -1,6 +1,6 @@
 .container-traductor {
-    margin: 15px;
-   
+   /* dejo de usarse esta clase de contenedor para usar la clase tabla-container */
+   color: black;
   }
   .row-traductor {
     display: flex;
@@ -14,9 +14,7 @@
     flex-basis: 100%;
     flex: 1;
   }
-  
   .column-style {
-  
     height: 100px;
     margin-left:5%;
     margin-right: 5%;
@@ -24,16 +22,9 @@
     align-self: center;
   }
   @media (max-width: 800px) {
-    .container-traductor  {
-      flex-direction: column;
-    }
     .row-traductor {
      flex-direction: column;
       }
-      .column-traductor {
-     flex-direction: column;
-      }
-      
       .column-style {
      flex-direction: column;
       }
