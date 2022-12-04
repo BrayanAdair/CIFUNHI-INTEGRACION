@@ -1,6 +1,6 @@
 .container-traductor {
     margin: 15px;
-    background-color: rgb(6, 6, 6);
+   
   }
   .row-traductor {
     display: flex;
@@ -16,9 +16,25 @@
   }
   
   .column-style {
-    background-color: orange;
+  
     height: 100px;
     margin-left:5%;
     margin-right: 5%;
     margin-top: 2%;
+    align-self: center;
+  }
+  @media (max-width: 800px) {
+    .container-traductor  {
+      flex-direction: column;
+    }
+    .row-traductor {
+     flex-direction: column;
+      }
+      .column-traductor {
+     flex-direction: column;
+      }
+      
+      .column-style {
+     flex-direction: column;
+      }
   }
