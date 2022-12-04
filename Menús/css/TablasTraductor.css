@@ -28,4 +28,7 @@
       .column-style {
      flex-direction: column;
       }
+      .audio-traductor{
+        margin-top:-40vw;
+      }
   }
