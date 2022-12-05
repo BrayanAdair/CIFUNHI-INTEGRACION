@@ -3,10 +3,15 @@
     include('conexion.php');
     $us = $_POST['user'];
     $pa = $_POST['password'];
+    $roll = 1;
     // queri para encontrar usuario y contraseña 
-    $query = "SELECT urs_name,pss FROM `urs` WHERE urs_name = '$us' AND pss = '$pa'";
+    $query = "SELECT nom,pss,id_roll FROM `admin` WHERE nom = '$us' AND pss = '$pa' AND id_roll = '$roll'";
+    
+    
     // conexion y generar consulta
     $insert = $conexion->query($query);
+
+
 
     if(isset($_POST['login'])){
         session_start();
@@ -16,18 +21,21 @@
             echo($message);
         }else{
             $count = mysqli_num_rows($insert);
-          if($count == 1) {
 
+          
+            if($count==1){
              echo 'welcome ' . $us;
             //  ingresar a una pestaña
-            header("location: ../Menú-Eleccion.html");
+            header("location: ../Menú-inicial.html");
             exit;
             
           }else {
-            header("location: ../html/login.html");
-            exit;
-          }
+          header("location: ../index.html");
+          exit;
+        }
         }
     
       }
-?>
+
+
+

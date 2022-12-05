@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2022 a las 14:47:16
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Tiempo de generación: 05-12-2022 a las 09:29:30
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `fundacion`
+-- Base de datos: `cifunhi`
 --
 
 -- --------------------------------------------------------
@@ -33,8 +33,17 @@ CREATE TABLE `admin` (
   `ape_p` varchar(255) DEFAULT NULL,
   `ape_m` varchar(255) DEFAULT NULL,
   `edad` int(5) DEFAULT NULL,
-  `carg` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `carg` varchar(255) DEFAULT NULL,
+  `pss` varchar(100) NOT NULL,
+  `id_roll` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `nom`, `ape_p`, `ape_m`, `edad`, `carg`, `pss`, `id_roll`) VALUES
+(1, 'root', 'root', 'root', 22, 'root', 'root', 1);
 
 -- --------------------------------------------------------
 
@@ -45,7 +54,27 @@ CREATE TABLE `admin` (
 CREATE TABLE `courses` (
   `id_course` int(11) NOT NULL,
   `tip_niv` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roll`
+--
+
+CREATE TABLE `roll` (
+  `id_roll` int(10) NOT NULL,
+  `roll` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `roll`
+--
+
+INSERT INTO `roll` (`id_roll`, `roll`) VALUES
+(1, 'administradores'),
+(2, 'estudiantes'),
+(3, 'profesores');
 
 -- --------------------------------------------------------
 
@@ -58,8 +87,17 @@ CREATE TABLE `students` (
   `nom` varchar(255) DEFAULT NULL,
   `ape_p` varchar(255) DEFAULT NULL,
   `ape_m` varchar(255) DEFAULT NULL,
-  `edad` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `edad` int(5) DEFAULT NULL,
+  `pss` varchar(100) NOT NULL,
+  `id_roll` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `students`
+--
+
+INSERT INTO `students` (`id_student`, `nom`, `ape_p`, `ape_m`, `edad`, `pss`, `id_roll`) VALUES
+(1, 'josue', 'gomez', 'omaña', 22, '1099', 2);
 
 -- --------------------------------------------------------
 
@@ -73,8 +111,17 @@ CREATE TABLE `teacher` (
   `ape_p` varchar(255) DEFAULT NULL,
   `ape_m` varchar(255) DEFAULT NULL,
   `edad` int(5) DEFAULT NULL,
-  `carg` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `carg` varchar(255) DEFAULT NULL,
+  `pss` varchar(100) NOT NULL,
+  `id_roll` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `teacher`
+--
+
+INSERT INTO `teacher` (`id_teacher`, `nom`, `ape_p`, `ape_m`, `edad`, `carg`, `pss`, `id_roll`) VALUES
+(1, 'cifunhi', 'cifunhi', 'cifunhi', 100, 'cifunhi', 'cifunhi', 3);
 
 -- --------------------------------------------------------
 
@@ -87,7 +134,7 @@ CREATE TABLE `tem_con_anima` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -100,7 +147,7 @@ CREATE TABLE `tem_con_dias` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -113,7 +160,7 @@ CREATE TABLE `tem_con_frutas` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -126,7 +173,7 @@ CREATE TABLE `tem_con_huesos` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -139,7 +186,7 @@ CREATE TABLE `tem_con_meses` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -152,7 +199,7 @@ CREATE TABLE `tem_con_nombres` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -165,7 +212,7 @@ CREATE TABLE `tem_con_partes_cuerpo` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -178,7 +225,7 @@ CREATE TABLE `tem_con_verduras` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -191,7 +238,7 @@ CREATE TABLE `tem_letras` (
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -204,7 +251,7 @@ CREATE TABLE `tem_num` (
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -217,7 +264,7 @@ CREATE TABLE `tem_silabas` (
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -230,7 +277,7 @@ CREATE TABLE `tem_sin_anima` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -243,7 +290,7 @@ CREATE TABLE `tem_sin_dias` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -256,7 +303,7 @@ CREATE TABLE `tem_sin_frutas` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -269,7 +316,7 @@ CREATE TABLE `tem_sin_huesos` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -282,7 +329,7 @@ CREATE TABLE `tem_sin_meses` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -295,7 +342,7 @@ CREATE TABLE `tem_sin_nombres` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -308,7 +355,7 @@ CREATE TABLE `tem_sin_partes_cuerpo` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -321,7 +368,7 @@ CREATE TABLE `tem_sin_verduras` (
   `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -334,19 +381,7 @@ CREATE TABLE `tem_vocales` (
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
   `tipo_voz` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `urs`
---
-
-CREATE TABLE `urs` (
-  `id_urs` int(15) NOT NULL,
-  `urs` varchar(50) DEFAULT NULL,
-  `pss` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -356,7 +391,8 @@ CREATE TABLE `urs` (
 -- Indices de la tabla `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
+  ADD PRIMARY KEY (`id_admin`),
+  ADD UNIQUE KEY `id_roll` (`id_roll`);
 
 --
 -- Indices de la tabla `courses`
@@ -365,16 +401,24 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`id_course`);
 
 --
+-- Indices de la tabla `roll`
+--
+ALTER TABLE `roll`
+  ADD PRIMARY KEY (`id_roll`);
+
+--
 -- Indices de la tabla `students`
 --
 ALTER TABLE `students`
-  ADD PRIMARY KEY (`id_student`);
+  ADD PRIMARY KEY (`id_student`),
+  ADD UNIQUE KEY `id_roll` (`id_roll`);
 
 --
 -- Indices de la tabla `teacher`
 --
 ALTER TABLE `teacher`
-  ADD PRIMARY KEY (`id_teacher`);
+  ADD PRIMARY KEY (`id_teacher`),
+  ADD UNIQUE KEY `id_roll` (`id_roll`);
 
 --
 -- Indices de la tabla `tem_con_anima`
@@ -497,12 +541,6 @@ ALTER TABLE `tem_vocales`
   ADD PRIMARY KEY (`id_tem_vocales`);
 
 --
--- Indices de la tabla `urs`
---
-ALTER TABLE `urs`
-  ADD PRIMARY KEY (`id_urs`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -510,7 +548,7 @@ ALTER TABLE `urs`
 -- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `courses`
@@ -522,13 +560,13 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT de la tabla `students`
 --
 ALTER TABLE `students`
-  MODIFY `id_student` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_student` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `id_teacher` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_teacher` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tem_con_anima`
@@ -651,10 +689,26 @@ ALTER TABLE `tem_vocales`
   MODIFY `id_tem_vocales` int(15) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `urs`
+-- Restricciones para tablas volcadas
 --
-ALTER TABLE `urs`
-  MODIFY `id_urs` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- Filtros para la tabla `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id_roll`) REFERENCES `roll` (`id_roll`);
+
+--
+-- Filtros para la tabla `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`id_roll`) REFERENCES `roll` (`id_roll`);
+
+--
+-- Filtros para la tabla `teacher`
+--
+ALTER TABLE `teacher`
+  ADD CONSTRAINT `teacher_ibfk_1` FOREIGN KEY (`id_roll`) REFERENCES `roll` (`id_roll`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
