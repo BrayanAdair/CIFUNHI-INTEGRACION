@@ -26,7 +26,7 @@
             if($count==1){
              echo 'welcome ' . $us;
             //  ingresar a una pestaña
-            header("location: ../niveles.html");
+            header("location: ../Menú-inicial.html");
             exit;
             
           }else {
