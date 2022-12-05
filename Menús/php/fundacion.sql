@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-12-2022 a las 23:43:29
+-- Tiempo de generación: 04-12-2022 a las 14:47:16
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -84,10 +84,9 @@ CREATE TABLE `teacher` (
 
 CREATE TABLE `tem_con_anima` (
   `id_tem_con_anima` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -98,24 +97,9 @@ CREATE TABLE `tem_con_anima` (
 
 CREATE TABLE `tem_con_dias` (
   `id_tem_con_dias` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tem_con_figura`
---
-
-CREATE TABLE `tem_con_figura` (
-  `id_tem_con_vocales` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
-  `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -126,10 +110,9 @@ CREATE TABLE `tem_con_figura` (
 
 CREATE TABLE `tem_con_frutas` (
   `id_tem_con_frutas` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -140,10 +123,9 @@ CREATE TABLE `tem_con_frutas` (
 
 CREATE TABLE `tem_con_huesos` (
   `id_tem_con_huesos` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -154,24 +136,35 @@ CREATE TABLE `tem_con_huesos` (
 
 CREATE TABLE `tem_con_meses` (
   `id_tem_con_meses` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tem_con_part_cuerpo`
+-- Estructura de tabla para la tabla `tem_con_nombres`
 --
 
-CREATE TABLE `tem_con_part_cuerpo` (
-  `id_tem_con_part_cuerpo` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+CREATE TABLE `tem_con_nombres` (
+  `id_tem_con_nombres` int(15) NOT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tem_con_partes_cuerpo`
+--
+
+CREATE TABLE `tem_con_partes_cuerpo` (
+  `id_tem_con_partes_cuerpo` int(15) NOT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
+  `audio` blob DEFAULT NULL,
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -182,10 +175,9 @@ CREATE TABLE `tem_con_part_cuerpo` (
 
 CREATE TABLE `tem_con_verduras` (
   `id_tem_con_verduras` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -198,8 +190,7 @@ CREATE TABLE `tem_letras` (
   `id_tem_letras` int(15) NOT NULL,
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -212,8 +203,7 @@ CREATE TABLE `tem_num` (
   `id_tem_num` int(15) NOT NULL,
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -226,8 +216,7 @@ CREATE TABLE `tem_silabas` (
   `id_tem_silabas` int(15) NOT NULL,
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -238,10 +227,9 @@ CREATE TABLE `tem_silabas` (
 
 CREATE TABLE `tem_sin_anima` (
   `id_tem_sin_anima` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -252,24 +240,9 @@ CREATE TABLE `tem_sin_anima` (
 
 CREATE TABLE `tem_sin_dias` (
   `id_tem_sin_dias` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tem_sin_figura`
---
-
-CREATE TABLE `tem_sin_figura` (
-  `id_tem_sin_vocales` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
-  `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -280,10 +253,9 @@ CREATE TABLE `tem_sin_figura` (
 
 CREATE TABLE `tem_sin_frutas` (
   `id_tem_sin_frutas` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -294,10 +266,9 @@ CREATE TABLE `tem_sin_frutas` (
 
 CREATE TABLE `tem_sin_huesos` (
   `id_tem_sin_huesos` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -308,24 +279,35 @@ CREATE TABLE `tem_sin_huesos` (
 
 CREATE TABLE `tem_sin_meses` (
   `id_tem_sin_meses` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tem_sin_part_cuerpo`
+-- Estructura de tabla para la tabla `tem_sin_nombres`
 --
 
-CREATE TABLE `tem_sin_part_cuerpo` (
-  `id_tem_sin_part_cuerpo` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+CREATE TABLE `tem_sin_nombres` (
+  `id_tem_sin_nombres` int(15) NOT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tem_sin_partes_cuerpo`
+--
+
+CREATE TABLE `tem_sin_partes_cuerpo` (
+  `id_tem_sin_partes_cuerpo` int(15) NOT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
+  `audio` blob DEFAULT NULL,
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -336,10 +318,9 @@ CREATE TABLE `tem_sin_part_cuerpo` (
 
 CREATE TABLE `tem_sin_verduras` (
   `id_tem_sin_verduras` int(15) NOT NULL,
-  `nom_tem` varchar(255) DEFAULT NULL,
+  `nombre_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -352,8 +333,7 @@ CREATE TABLE `tem_vocales` (
   `id_tem_vocales` int(15) NOT NULL,
   `nom_tem` varchar(255) DEFAULT NULL,
   `audio` blob DEFAULT NULL,
-  `id_courses` int(15) DEFAULT NULL,
-  `tipo_voz` varchar(50) NOT NULL
+  `tipo_voz` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -364,11 +344,8 @@ CREATE TABLE `tem_vocales` (
 
 CREATE TABLE `urs` (
   `id_urs` int(15) NOT NULL,
-  `urs_name` varchar(50) DEFAULT NULL,
-  `pss` varchar(50) DEFAULT NULL,
-  `id_student` int(15) DEFAULT NULL,
-  `id_admin` int(15) NOT NULL,
-  `id_teacher` int(15) NOT NULL
+  `urs` varchar(50) DEFAULT NULL,
+  `pss` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -403,150 +380,127 @@ ALTER TABLE `teacher`
 -- Indices de la tabla `tem_con_anima`
 --
 ALTER TABLE `tem_con_anima`
-  ADD PRIMARY KEY (`id_tem_con_anima`),
-  ADD KEY `tem_con_anima_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_con_anima`);
 
 --
 -- Indices de la tabla `tem_con_dias`
 --
 ALTER TABLE `tem_con_dias`
-  ADD PRIMARY KEY (`id_tem_con_dias`),
-  ADD KEY `tem_con_dias_fk0` (`id_courses`);
-
---
--- Indices de la tabla `tem_con_figura`
---
-ALTER TABLE `tem_con_figura`
-  ADD PRIMARY KEY (`id_tem_con_vocales`),
-  ADD KEY `tem_con_figura_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_con_dias`);
 
 --
 -- Indices de la tabla `tem_con_frutas`
 --
 ALTER TABLE `tem_con_frutas`
-  ADD PRIMARY KEY (`id_tem_con_frutas`),
-  ADD KEY `tem_con_frutas_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_con_frutas`);
 
 --
 -- Indices de la tabla `tem_con_huesos`
 --
 ALTER TABLE `tem_con_huesos`
-  ADD PRIMARY KEY (`id_tem_con_huesos`),
-  ADD KEY `tem_con_huesos_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_con_huesos`);
 
 --
 -- Indices de la tabla `tem_con_meses`
 --
 ALTER TABLE `tem_con_meses`
-  ADD PRIMARY KEY (`id_tem_con_meses`),
-  ADD KEY `tem_con_meses_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_con_meses`);
 
 --
--- Indices de la tabla `tem_con_part_cuerpo`
+-- Indices de la tabla `tem_con_nombres`
 --
-ALTER TABLE `tem_con_part_cuerpo`
-  ADD PRIMARY KEY (`id_tem_con_part_cuerpo`),
-  ADD KEY `tem_con_part_cuerpo_fk0` (`id_courses`);
+ALTER TABLE `tem_con_nombres`
+  ADD PRIMARY KEY (`id_tem_con_nombres`);
+
+--
+-- Indices de la tabla `tem_con_partes_cuerpo`
+--
+ALTER TABLE `tem_con_partes_cuerpo`
+  ADD PRIMARY KEY (`id_tem_con_partes_cuerpo`);
 
 --
 -- Indices de la tabla `tem_con_verduras`
 --
 ALTER TABLE `tem_con_verduras`
-  ADD PRIMARY KEY (`id_tem_con_verduras`),
-  ADD KEY `tem_con_verduras_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_con_verduras`);
 
 --
 -- Indices de la tabla `tem_letras`
 --
 ALTER TABLE `tem_letras`
-  ADD PRIMARY KEY (`id_tem_letras`),
-  ADD KEY `tem_letras_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_letras`);
 
 --
 -- Indices de la tabla `tem_num`
 --
 ALTER TABLE `tem_num`
-  ADD PRIMARY KEY (`id_tem_num`),
-  ADD KEY `tem_num_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_num`);
 
 --
 -- Indices de la tabla `tem_silabas`
 --
 ALTER TABLE `tem_silabas`
-  ADD PRIMARY KEY (`id_tem_silabas`),
-  ADD KEY `tem_silabas_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_silabas`);
 
 --
 -- Indices de la tabla `tem_sin_anima`
 --
 ALTER TABLE `tem_sin_anima`
-  ADD PRIMARY KEY (`id_tem_sin_anima`),
-  ADD KEY `tem_sin_anima_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_sin_anima`);
 
 --
 -- Indices de la tabla `tem_sin_dias`
 --
 ALTER TABLE `tem_sin_dias`
-  ADD PRIMARY KEY (`id_tem_sin_dias`),
-  ADD KEY `tem_sin_dias_fk0` (`id_courses`);
-
---
--- Indices de la tabla `tem_sin_figura`
---
-ALTER TABLE `tem_sin_figura`
-  ADD PRIMARY KEY (`id_tem_sin_vocales`),
-  ADD KEY `tem_sin_figura_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_sin_dias`);
 
 --
 -- Indices de la tabla `tem_sin_frutas`
 --
 ALTER TABLE `tem_sin_frutas`
-  ADD PRIMARY KEY (`id_tem_sin_frutas`),
-  ADD KEY `tem_sin_frutas_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_sin_frutas`);
 
 --
 -- Indices de la tabla `tem_sin_huesos`
 --
 ALTER TABLE `tem_sin_huesos`
-  ADD PRIMARY KEY (`id_tem_sin_huesos`),
-  ADD KEY `tem_sin_huesos_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_sin_huesos`);
 
 --
 -- Indices de la tabla `tem_sin_meses`
 --
 ALTER TABLE `tem_sin_meses`
-  ADD PRIMARY KEY (`id_tem_sin_meses`),
-  ADD KEY `tem_sin_meses_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_sin_meses`);
 
 --
--- Indices de la tabla `tem_sin_part_cuerpo`
+-- Indices de la tabla `tem_sin_nombres`
 --
-ALTER TABLE `tem_sin_part_cuerpo`
-  ADD PRIMARY KEY (`id_tem_sin_part_cuerpo`),
-  ADD KEY `tem_sin_part_cuerpo_fk0` (`id_courses`);
+ALTER TABLE `tem_sin_nombres`
+  ADD PRIMARY KEY (`id_tem_sin_nombres`);
+
+--
+-- Indices de la tabla `tem_sin_partes_cuerpo`
+--
+ALTER TABLE `tem_sin_partes_cuerpo`
+  ADD PRIMARY KEY (`id_tem_sin_partes_cuerpo`);
 
 --
 -- Indices de la tabla `tem_sin_verduras`
 --
 ALTER TABLE `tem_sin_verduras`
-  ADD PRIMARY KEY (`id_tem_sin_verduras`),
-  ADD KEY `tem_sin_verduras_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_sin_verduras`);
 
 --
 -- Indices de la tabla `tem_vocales`
 --
 ALTER TABLE `tem_vocales`
-  ADD PRIMARY KEY (`id_tem_vocales`),
-  ADD KEY `tem_vocales_fk0` (`id_courses`);
+  ADD PRIMARY KEY (`id_tem_vocales`);
 
 --
 -- Indices de la tabla `urs`
 --
 ALTER TABLE `urs`
-  ADD PRIMARY KEY (`id_urs`),
-  ADD KEY `urs_fk0` (`id_student`),
-  ADD KEY `urs_fk1` (`id_admin`),
-  ADD KEY `urs_fk2` (`id_teacher`);
+  ADD PRIMARY KEY (`id_urs`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -589,12 +543,6 @@ ALTER TABLE `tem_con_dias`
   MODIFY `id_tem_con_dias` int(15) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tem_con_figura`
---
-ALTER TABLE `tem_con_figura`
-  MODIFY `id_tem_con_vocales` int(15) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `tem_con_frutas`
 --
 ALTER TABLE `tem_con_frutas`
@@ -613,10 +561,16 @@ ALTER TABLE `tem_con_meses`
   MODIFY `id_tem_con_meses` int(15) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tem_con_part_cuerpo`
+-- AUTO_INCREMENT de la tabla `tem_con_nombres`
 --
-ALTER TABLE `tem_con_part_cuerpo`
-  MODIFY `id_tem_con_part_cuerpo` int(15) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tem_con_nombres`
+  MODIFY `id_tem_con_nombres` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tem_con_partes_cuerpo`
+--
+ALTER TABLE `tem_con_partes_cuerpo`
+  MODIFY `id_tem_con_partes_cuerpo` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tem_con_verduras`
@@ -655,12 +609,6 @@ ALTER TABLE `tem_sin_dias`
   MODIFY `id_tem_sin_dias` int(15) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tem_sin_figura`
---
-ALTER TABLE `tem_sin_figura`
-  MODIFY `id_tem_sin_vocales` int(15) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `tem_sin_frutas`
 --
 ALTER TABLE `tem_sin_frutas`
@@ -679,10 +627,16 @@ ALTER TABLE `tem_sin_meses`
   MODIFY `id_tem_sin_meses` int(15) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `tem_sin_part_cuerpo`
+-- AUTO_INCREMENT de la tabla `tem_sin_nombres`
 --
-ALTER TABLE `tem_sin_part_cuerpo`
-  MODIFY `id_tem_sin_part_cuerpo` int(15) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `tem_sin_nombres`
+  MODIFY `id_tem_sin_nombres` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tem_sin_partes_cuerpo`
+--
+ALTER TABLE `tem_sin_partes_cuerpo`
+  MODIFY `id_tem_sin_partes_cuerpo` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tem_sin_verduras`
@@ -701,138 +655,6 @@ ALTER TABLE `tem_vocales`
 --
 ALTER TABLE `urs`
   MODIFY `id_urs` int(15) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `tem_con_anima`
---
-ALTER TABLE `tem_con_anima`
-  ADD CONSTRAINT `tem_con_anima_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_dias`
---
-ALTER TABLE `tem_con_dias`
-  ADD CONSTRAINT `tem_con_dias_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_figura`
---
-ALTER TABLE `tem_con_figura`
-  ADD CONSTRAINT `tem_con_figura_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_frutas`
---
-ALTER TABLE `tem_con_frutas`
-  ADD CONSTRAINT `tem_con_frutas_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_huesos`
---
-ALTER TABLE `tem_con_huesos`
-  ADD CONSTRAINT `tem_con_huesos_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_meses`
---
-ALTER TABLE `tem_con_meses`
-  ADD CONSTRAINT `tem_con_meses_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_part_cuerpo`
---
-ALTER TABLE `tem_con_part_cuerpo`
-  ADD CONSTRAINT `tem_con_part_cuerpo_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_con_verduras`
---
-ALTER TABLE `tem_con_verduras`
-  ADD CONSTRAINT `tem_con_verduras_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_letras`
---
-ALTER TABLE `tem_letras`
-  ADD CONSTRAINT `tem_letras_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_num`
---
-ALTER TABLE `tem_num`
-  ADD CONSTRAINT `tem_num_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_silabas`
---
-ALTER TABLE `tem_silabas`
-  ADD CONSTRAINT `tem_silabas_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_anima`
---
-ALTER TABLE `tem_sin_anima`
-  ADD CONSTRAINT `tem_sin_anima_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_dias`
---
-ALTER TABLE `tem_sin_dias`
-  ADD CONSTRAINT `tem_sin_dias_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_figura`
---
-ALTER TABLE `tem_sin_figura`
-  ADD CONSTRAINT `tem_sin_figura_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_frutas`
---
-ALTER TABLE `tem_sin_frutas`
-  ADD CONSTRAINT `tem_sin_frutas_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_huesos`
---
-ALTER TABLE `tem_sin_huesos`
-  ADD CONSTRAINT `tem_sin_huesos_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_meses`
---
-ALTER TABLE `tem_sin_meses`
-  ADD CONSTRAINT `tem_sin_meses_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_part_cuerpo`
---
-ALTER TABLE `tem_sin_part_cuerpo`
-  ADD CONSTRAINT `tem_sin_part_cuerpo_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_sin_verduras`
---
-ALTER TABLE `tem_sin_verduras`
-  ADD CONSTRAINT `tem_sin_verduras_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `tem_vocales`
---
-ALTER TABLE `tem_vocales`
-  ADD CONSTRAINT `tem_vocales_fk0` FOREIGN KEY (`id_courses`) REFERENCES `courses` (`id_course`);
-
---
--- Filtros para la tabla `urs`
---
-ALTER TABLE `urs`
-  ADD CONSTRAINT `urs_fk0` FOREIGN KEY (`id_student`) REFERENCES `students` (`id_student`),
-  ADD CONSTRAINT `urs_fk1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`),
-  ADD CONSTRAINT `urs_fk2` FOREIGN KEY (`id_teacher`) REFERENCES `teacher` (`id_teacher`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
