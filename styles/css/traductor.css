@@ -1,0 +1,44 @@
+.title{
+    text-align: center;
+    font-size: 2.2rem;
+    padding: 2rem;
+}
+.traductor__container{
+    height:50vh;
+    position:relative;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    margin: 50px auto 100px auto;
+
+    background-color: rgba(243, 237, 243, 0.333);
+
+}
+.container__flex{
+    
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    
+    
+}
+
+.table__flex{
+    rotate: 90deg;
+    
+
+}
+.rotate{
+    rotate: -90deg;
+}
+
+.container__flex__audio{
+    margin: 10px;
+    text-align:center;
+}
+
+
+
