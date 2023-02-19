@@ -42,5 +42,21 @@
 }
 
 
-
+.container-image{
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;  
+    margin: 10px 0;
+  }
+.flexElements{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;   
+    margin: 5px;
+}
+.container__flex__audio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
