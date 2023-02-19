@@ -66,7 +66,7 @@
                 <div class="u-custom-menu u-nav-container">
                     <ul class="u-custom-font u-font-raleway u-nav u-unstyled u-nav-1">
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./html/modulos/error.html"
-                                style="padding: 10px 20px;">Quienes Somos</a>
+                                style="padding: 10px 20px;" alt="link quienes somos" >Quienes Somos</a>
                         </li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link" href="./html/modulos/error.html"
                                 style="padding: 10px 20px;">Contacto</a>
@@ -104,22 +104,22 @@
             
             <form  class="form__container" method="POST" action="/php/modulos/datos/envioInfo.php">
                 <!-- titulo de login  -->
-                <h4 class="title__login">Iniciar Sesion</h4>
+                <h4 class="title__login" tabindex="1">Iniciar Sesion</h4>
                 <!-- inputs ingresar informacion  -->
                 <div class="form_container_input">
                     <div class="input__container">  
                         <span class="icon-user"></span>
-                        <input type="text" placeholder="Ingrese Su Nombre De Usuario" name="user">
+                        <input type="text" placeholder="Ingrese Su Usuario" name="user" tabindex="2">
                     </div>
                     <div class="input__container"> 
                         <span  class="icon-vpn_key"></span>
-                        <input type="password" placeholder="Ingrese Su Contraseña" name="password">
+                        <input type="password" placeholder="Ingrese Su Contraseña" name="password"tabindex="3">
                     </div>
-                    <button class="button_login" name="login">Entrar</button>
+                    <button class="button_login" name="login" tabindex="4">Entrar</button>
                 </div>
                 <!-- sub opcion de form  -->
                 <div class="options_form">
-                    <a href="#" class="login__Option forget__password" onclick="alerVisible()">Olvide mi contraseña</a>
+                    <a href="#" class="login__Option forget__password" onclick="alerVisible()" tabindex="5">Olvide mi contraseña</a>
                     <!-- <a href="#" class="login__Option signup" >Signup</a> -->
                 </div>
             </form>
@@ -128,10 +128,10 @@
     <div class="alert__forgetPassword">
         <div class="title__alert">
             <h4>Olvide mi contraseña: </h4>
-            <span class="icon-clear" onclick="alerHidden()"></span>
+            <span class="icon-clear" onclick="alerHidden()"title="icono cerrar" tabindex="6"></span>
         </div>
         <div class="texto__correo">
-            <p>
+            <p tabindex="6">
                 Lo sentimos, la única forma de restablecer su contraseña es enviándonos un correo electrónico a la siguiente dirección:
                 <a href="#" class="correo">cifunhi2@gmail.com</a> 
             </p>
