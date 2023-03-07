@@ -6,20 +6,24 @@ Elaborados por: Brayan Adair & Alexis Arturo
 */
 /* Estilos del boton accesibilidad, boton flotante mas background y hover mas mediaquery */
 .btn-Accesibilidad{
+  z-index: 9999;
   position:fixed !important;
     width:70px;
     height:70px;
     bottom:4vw;
     right:48%;
-    background:#34435A;
+    background:#7298d1;
     color:#FFF;
     border-radius:50px;
     text-align:center;
     font-size:35px;
     
 }
+.high-contrast .btn-Accesibilidad {
+  position: fixed !important;
+}
 .btn-Accesibilidad:hover{
-    background: #7298d1;
+    background: #0e4388;
      position:fixed !important;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
@@ -47,7 +51,7 @@ Estilos para el Menu Modal
   }
   /* Modal Content */
   .modal-content {
-   
+  
     width: 70% !important;
     
      
@@ -83,12 +87,16 @@ Estilos para el Menu Modal
     padding: 2px 16px;
     background-color: #34435A;
     color: white;
+    text-align: center;
   }
   
   .modal-body {
+
     padding: 2px 16px;
     background-color: #26303d;
   }
+ 
+  
  
   /* ------------------------------------------------------------------------------------------
   estilos para accesibilidad
