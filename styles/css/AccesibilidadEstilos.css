@@ -10,21 +10,24 @@ Elaborados por: Brayan Adair & Alexis Arturo
   position:fixed !important;
     width:70px;
     height:70px;
-    bottom:4vw;
+    bottom:3vw;
     right:48%;
-    background:#7298d1;
+    background:#242424;
     color:#FFF;
     border-radius:50px;
     text-align:center;
     font-size:35px;
+    transition: border-color 0.5s ease;
     
 }
 .high-contrast .btn-Accesibilidad {
   position: fixed !important;
 }
 .btn-Accesibilidad:hover{
-    background: #0e4388;
+    background: #413f3f;
      position:fixed !important;
+     border-color: #070707;
+    box-shadow: 0px 0px 10px 0px #000000;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
     .btn-Accesibilidad{
@@ -186,5 +189,5 @@ Estilos para el Menu Modal
     cursor: url("https://cdn-icons-png.flaticon.com/128/8164/8164964.png"), auto;
   }
   .main.new-cursor a:hover {
-    cursor: url("https://cdn-icons-png.flaticon.com/128/1437/1437734.png"), auto;
+    cursor: url("https://cdn-icons-png.flaticon.com/128/8164/8164964.png"), auto;
   }
