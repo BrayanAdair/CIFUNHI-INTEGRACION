@@ -75,5 +75,28 @@
     width:200px; 
     margin:5px 0 0 30px;
   }
+  .imagen-alfabeto{
+    height:90px;
+     width:120px;
+     margin: 0 0 0 25px;
+     
+  }
+  .items-abc{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px 70px;
+
+
+  }
+  .items-abc:hover{
+    border-radius: 10px;
+    outline: 1px solid rgba(219, 219, 219, 0.895);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  
  
   
