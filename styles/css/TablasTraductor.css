@@ -34,9 +34,46 @@
       .audio-traductor{
         margin-top:-40vw;
       }
+      .items-image{
+        display: inline-block !important;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 50px !important;
+        border-bottom: 1px solid rgba(233, 233, 233, 0.544);
+        margin: auto 0 !important;
+      }
+      .items-image:hover{
+        background-color: rgba(231, 230, 230, 0.24);
+      }
+      
   }
   .img-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
+
+  /* container de imagenes  */
+  .items-image{
+    display: flex;
+    flex-direction: row;
+    margin:20px 50px;
+    padding: 15px;
+  
+  }
+  .items-image:hover{
+    border-radius: 10px;
+    outline: 1px solid rgb(213, 213, 213);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  .imagen{
+    height: 70px;
+    width:200px; 
+    margin:5px 0 0 30px;
+  }
+ 
+  
