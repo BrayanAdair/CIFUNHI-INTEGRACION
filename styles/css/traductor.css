@@ -51,7 +51,9 @@
 .flexElements{
     display: flex;
     flex-direction: column; 
-    justify-content: space-between;   
+    justify-content: center;
+    align-items: center;  
+    width: 100%; 
     margin: 5px;
 }
 .container__flex__audio{
@@ -59,4 +61,10 @@
     align-items: center;
     justify-content: center;
 }
-
+.img-vocalesC{
+    margin:0 0 15px 0;
+     width:115px;
+     height:70px;
+     
+     
+}
