@@ -13,6 +13,7 @@
     <meta name="description" content="">
     <title>Login</title>
     <link rel="stylesheet" href="/styles/css/menus.css" media="screen">
+    <link rel="stylesheet" href="/styles/css/alex.css" type="text/css">
     <!-- estilos accesibilidad -->
     <link href="/styles/css/AccesibilidadEstilos.css" rel="stylesheet" media="screen">
     <link href="/resourses/boostrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -104,7 +105,7 @@
     <main class="container__login" >
         <section class="section__login">
             
-            <form  class="form__container" method="POST" action="/php/modulos/datos/envioInfo.php">
+            <form  class="form__container" method="POST" action="/php/modulos/datos/envioInfo.html">
                 <!-- titulo de login  -->
                 <h4 class="title__login" tabindex="1">Iniciar Sesión</h4>
                 <!-- inputs ingresar informacion  -->
@@ -141,80 +142,45 @@
     </div>
     <!-- login  -->
 
-    <footer class="u-clearfix u-custom-color-1 u-footer" id="sec-5516">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-                <div class="u-gutter-0 u-layout">
-                    <div class="u-layout-row">
-                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
-                            <div class="u-container-layout u-valign-middle u-container-layout-1">
-                                <!--position-->
-                                <div data-position="" class="u-position">
-                                    <!--block-->
-                                    <div class="u-block">
-                                        <div class="u-block-container u-clearfix">
-                                            <!--block_header-->
-                                            <h5 class="u-block-header u-custom-font u-font-raleway u-text u-text-1">
-                                                <!--block_header_content--> Ciegos Fundación Hidalguense A.C.
-                                                <!--/block_header_content-->
-                                            </h5>
-                                            <!--/block_header-->
-                                            <!--block_content-->
-                                            <div class="u-block-content u-custom-font u-font-raleway u-text">
-                                                <!--block_content_content-->
-                                                <span style="font-weight: 700;">
-                                                    <br>Calle Julián Villagrán #412 Centro <br>Pachuca, Hidalgo, México
-                                                    <br>
-                                                    <br>+52 (771) 715 1789
-                                                </span>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <!--/block_content_content-->
-                                            </div>
-                                            <!--/block_content-->
-                                        </div>
-                                    </div>
-                                    <!--/block-->
-                                </div>
-                                <!--/position-->
-                            </div>
-                        </div>
-                        <div class="u-align-left u-container-style u-layout-cell u-size-20 u-layout-cell-2">
-                            <div class="u-container-layout u-container-layout-2">
-                                <div class="u-border-2 u-border-white u-line u-line-vertical u-line-1"></div>
-                                <img class="u-image u-image-contain u-image-default u-image-1"
-                                    src="/assets/imagenes/logoFundacion.png" alt="logo CIFUNH" data-image-width="544"
-                                    data-image-height="458">
-                                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2"
-                                    src="/assets/imagenes/logoBrailleT.png" alt="logo BRAILLE-T" data-image-width="500"
-                                    data-image-height="500">
-                            </div>
-                        </div>
-                        <div
-                            class="u-align-right u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
-                            <div class="u-container-layout u-container-layout-3">
-                                <p class="u-custom-font u-font-raleway u-text u-text-default u-text-3">Síguenos en:</p>
-                                <div class="u-social-icons u-spacing-20 u-social-icons-1">
-                                    <a class="u-social-url" title="facebook" target="_blank"
-                                        href="https://www.facebook.com/cifunhi.org/"><span
-                                            class="u-file-icon u-icon u-social-facebook u-social-icon u-text-white u-icon-1"><img
-                                                src="/assets/imagenes/logoFacebook.png" alt="facebook"></span>
-                                    </a>
-                                    <a class="u-social-url" title="instagram" target="_blank"
-                                        href="https://www.instagram.com/cifunhi/?hl=es-la"><span
-                                            class="u-file-icon u-icon u-social-icon u-social-instagram u-text-white u-icon-2"><img
-                                                src="/assets/imagenes/logoInstagram.png" alt="instagram"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="footer-content">
+                <h5 class="footer-heading">Ciegos Fundación Hidalguense A.C.</h5>
+                <div class="footer-text">
+                  <p>Calle Julián Villagrán #412 Centro</p>
+                  <p>Pachuca, Hidalgo, México</p>
+                  <p>+52 (771) 715 1789</p>
                 </div>
+              </div>
             </div>
-            <p class="u-custom-font u-font-raleway u-text u-text-default u-text-4"> Copyright © 2023 BRAILLE-T | CIFUNHI</p>
+            <div class="col-md-4">
+              <div class="footer-logo">
+                <img src="/assets/imagenes/logoFundacion.png" alt="Fundación Hidalguense">
+                <img src="/assets/imagenes/logoBrailleT.png" alt="Braille-T">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer-social">
+                <h5 class="footer-heading">Síguenos en:</h5>
+                <ul class="footer-social-icons">
+                  <li><a href="#"><img src="/assets/imagenes/logoFacebook.png" alt="Facebook"></a></li>
+                  <li><a href="#"><img src="/assets/imagenes/logoInstagram.png" alt="Instagram"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-bottom">
+                <p>© 2023 BRAILLE-T | CIFUNHI. Todos los derechos reservados.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
+      
 <!-- Inicio de Accesibilidad  CIFUNH  -->
 <!-- Boton Accesibilidad-->
 <a class="btn-Accesibilidad"  id="Accesibilidad">
