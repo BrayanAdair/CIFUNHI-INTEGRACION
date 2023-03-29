@@ -1,6 +1,6 @@
 <?php
     // incluimos la conexion a la DB desde un php externo 
-    include('../conexion/conexion.html');
+    include('../conexion/conexion.php');
     $us = $_POST['user'];
     $pa = $_POST['password'];
     $roll = 1;

@@ -105,18 +105,18 @@
     <main class="container__login" >
         <section class="section__login">
             
-            <form  class="form__container" method="POST" action="/php/modulos/datos/envioInfo.html">
+            <form  class="form__container" method="POST" action="/php/modulos/datos/envioInfo.php">
                 <!-- titulo de login  -->
                 <h4 class="title__login" tabindex="1">Iniciar Sesión</h4>
                 <!-- inputs ingresar informacion  -->
                 <div class="form_container_input">
                     <div class="input__container">  
                         <span class="icon-user"></span>
-                        <input type="text" placeholder="Usuario" name="user" tabindex="2">
+                        <input type="text" placeholder="Usuario" name="user"  id="usuario"tabindex="2">
                     </div>
                     <div class="input__container"> 
                         <span  class="icon-vpn_key"></span>
-                        <input type="password" placeholder="Contraseña" name="password"tabindex="3">
+                        <input type="password" placeholder="Contraseña" name="password" id="password"tabindex="3">
                     </div>
                     <button class="button_login" name="login" tabindex="4">Entrar</button>
                 </div>
@@ -209,5 +209,5 @@
 <!-- Fin del menu modal Accesibilidad CIFUNHI -->
 </body>
 <!-- scripts login -->
-<script src="/js/scripts/login.js"></script>
+<script src="./js/scripts/login.js"></script>
 </html>
