@@ -1,10 +1,33 @@
-# CIFUNHI-INTEGRACION
-Copyrigth BRAILLE-T 2023
-Este es un proyecto de indole privada, la distribucion sin autorizacion puede ser causa de una sancion.
+# Braille-t Demo nivel Preescolar
 
-Las integraciones estan en las siguientes rutas:
+Este es un sistema demo de la aplicacion web Braille-t destinada para CIFUNHI.org
 
-LOGIN = carpeta llamada html ahi dentro esta el login
-ACCESIBILIDAD = Todos los documentos html al final de cada body y todo se encuentra comentado de inicio a fin.
+## Lenguajes utilizados
 
-SE CREARON CARPETAS DE CSS Y JS EN DONDE ESTAN LAS LIBRERIAS Y CLASES PERTINENTES PARA CADA COSA, SE METIO BOOSTRAP SOLO PARA EL POOPER DEL MODAL DE ACCESIBILIDAD SIN EMBARGO NO AFECTA EN NADA AL DISEÑO ORIGINAL SOLO SE USA PARA ABRIR EL MENU DE ACCESIBILIDAD.
+Pensado para ser migrado en un host sin php.
+
+```bash
+HTML
+JavaScript
+Css
+Sass
+```
+
+## Librerias y frameworks extras
+
+```bash
+Boostrap v4.4.1
+Si tu servidor Usa Hpanel o acepta el uso de boostrap desde el directorio raiz del proyecto deja la carpeta "resources"
+en caso que tu servidor use cpanel o no te reconozca boostrap desde la carpeta raiz del proyecto, en las lineas del head en todos 
+los html se encuentra el link crn de los estilos y js necesarios para su funcionamiento y los puedes dejar si gustas.
+"si quieres seguir usando los links crn de boostrap en el head de los bodys entonces borra la carpeta resources si lo crees necesario"
+FontAwesome v5.10.0
+Usamos los iconos de fontAwesome version 5.10.0
+```
+
+## CopyRigth
+Braille-t & CIFUNHI
+
+## Contacto:
+
+https://bzsoftwares.com/
